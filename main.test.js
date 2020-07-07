@@ -3,9 +3,74 @@
  ******************/
 
 
+ const addAll = function(arr) {
+  let combined = 0;
 
+  for (const index of arr) {
+    combined = combined + index;
+  }
+  return combined;
+ }
 
+const countSpaces = function(str) {
+  let spacesNum = 0
 
+  for (const index of str) {
+    if (index === " ") {
+      spacesNum++; ;
+    }
+  }
+  return spacesNum;
+}
+
+const countTrues = function(arr) {
+  let theTruth = 0;
+
+  for (const index of arr) {
+    if (index === true) {
+      theTruth++;
+    }
+  }
+return theTruth;
+}
+
+const makeFriendly = function(str) {
+  let exclaim = "";
+
+  for (const index of str) {
+    if (index === ".") {
+      exclaim = exclaim + "!";
+    } else {
+      exclaim = exclaim + index;
+    }
+  }
+  return exclaim;
+}
+
+const cubeAll = function(arr) {
+  let cubedResult = [];
+
+  for (const arrIndex of arr) {
+    cubedResult.push(Math.pow(arrIndex, 3));
+  }
+
+return cubedResult; 
+}
+
+const addNoises = function(arr) {
+  result = [];
+
+  for (const animal of arr) {
+    if (animal === 'Fido' || animal === 'Rolph' || animal === 'Maisie') {
+      result.push(animal + ` says "Woof!"`);
+    } else if (animal === 'Garfield' || animal === 'Heathcliff') {
+      result.push(animal + ` says "Meow!"`);
+    } else if (animal === 'Barnie' || animal === 'Sharp Tooth') {
+      result.push (animal + ` says "ROWR."`)
+    }
+  }
+  return result; 
+}
 
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
